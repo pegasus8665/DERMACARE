@@ -1,0 +1,98 @@
+{
+    "_comment": "Conceptual schema for Looker Studio / Data Studio integration. Aggregates data from GA4 and backend Lead Management.",
+    "tables": [
+        {
+            "name": "website_traffic",
+            "source": "Google Analytics 4",
+            "fields": [
+                {
+                    "name": "date",
+                    "type": "DATE",
+                    "description": "Date of the visit"
+                },
+                {
+                    "name": "page_url",
+                    "type": "STRING",
+                    "description": "Full URL of the page visited"
+                },
+                {
+                    "name": "page_path",
+                    "type": "STRING",
+                    "description": "Path, e.g., /services/laser-hair-removal/kolkata"
+                },
+                {
+                    "name": "utm_source",
+                    "type": "STRING"
+                },
+                {
+                    "name": "utm_medium",
+                    "type": "STRING"
+                },
+                {
+                    "name": "utm_campaign",
+                    "type": "STRING"
+                },
+                {
+                    "name": "sessions",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "form_submissions",
+                    "type": "INTEGER",
+                    "description": "Count of form_submit events"
+                },
+                {
+                    "name": "call_clicks",
+                    "type": "INTEGER",
+                    "description": "Count of call_click events"
+                },
+                {
+                    "name": "whatsapp_clicks",
+                    "type": "INTEGER",
+                    "description": "Count of whatsapp_click events"
+                }
+            ]
+        },
+        {
+            "name": "leads_crm",
+            "source": "CRM Database",
+            "fields": [
+                {
+                    "name": "lead_id",
+                    "type": "STRING"
+                },
+                {
+                    "name": "created_at",
+                    "type": "TIMESTAMP"
+                },
+                {
+                    "name": "name",
+                    "type": "STRING"
+                },
+                {
+                    "name": "city",
+                    "type": "STRING"
+                },
+                {
+                    "name": "service_interest",
+                    "type": "STRING"
+                },
+                {
+                    "name": "captured_url",
+                    "type": "STRING",
+                    "description": "The exact programmatic URL they submitted the form on"
+                },
+                {
+                    "name": "utm_source",
+                    "type": "STRING",
+                    "description": "Source stored in session by urmsTracker.js"
+                },
+                {
+                    "name": "status",
+                    "type": "STRING",
+                    "description": "Lead status e.g. New, Contacted, Appointment Booked, Converted"
+                }
+            ]
+        }
+    ]
+}

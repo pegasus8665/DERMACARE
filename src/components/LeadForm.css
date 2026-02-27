@@ -1,0 +1,9 @@
+.lead-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.btn-block {
+    width: 100%;
+}
