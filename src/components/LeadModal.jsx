@@ -5,15 +5,10 @@ const LeadModal = ({ isOpen, onClose }) => {
 
     return (
         <div className={`modal-overlay ${isOpen ? 'open' : ''}`} onClick={onClose}>
-            <div className="modal-content" onClick={e => e.stopPropagation()}>
-                <button className="modal-close" onClick={onClose}>
+            <div className="modal-content" onClick={e => e.stopPropagation()} style={{ padding: 0, background: 'transparent', boxShadow: 'none' }}>
+                <button className="modal-close" onClick={onClose} style={{ top: '-40px', right: 0, color: 'white', background: 'rgba(0,0,0,0.5)' }}>
                     <X size={24} />
                 </button>
-
-                <div className="modal-header">
-                    <h2 className="modal-title">Find Your Clinic</h2>
-                    <p className="modal-desc">Leave your details below and we will connect you with top specialists.</p>
-                </div>
 
                 <LeadForm onSuccess={onClose} />
             </div>

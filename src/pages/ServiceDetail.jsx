@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import { Calendar, CheckCircle2, Phone, MessageCircle } from 'lucide-react';
+import { Calendar, CheckCircle2, Phone, MessageCircle, MapPin } from 'lucide-react';
 import { services } from '../data/cms';
 import LeadForm from '../components/LeadForm';
 import SEOHead from '../components/SEOHead';
@@ -122,9 +122,7 @@ const ServiceDetail = () => {
                     </div>
 
                     <div className="srv-sidebar">
-                        <div className="booking-card">
-                            <h3>Start Your Journey to Flawless Skin</h3>
-                            <p style={{ marginBottom: '1.5rem' }}>Book a personalized consultation for {title} today.</p>
+                        <div>
                             <LeadForm defaultService={title} />
                         </div>
                     </div>

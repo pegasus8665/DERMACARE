@@ -193,8 +193,7 @@ const Home = () => {
                                 <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.75rem', fontWeight: 500 }}><span style={{ color: 'var(--color-primary)' }}>✓</span> Hassle-Free Bookings</li>
                             </ul>
                         </div>
-                        <div style={{ background: 'white', padding: '2.5rem', borderRadius: '16px', boxShadow: '0 10px 40px rgba(0,0,0,0.08)' }}>
-                            <h3 style={{ marginBottom: '1.5rem', textAlign: 'center' }}>Request Callback</h3>
+                        <div>
                             <LeadForm />
                         </div>
                     </div>
